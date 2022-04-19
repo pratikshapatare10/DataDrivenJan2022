@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="First(failed)">
+    <classes>
+      <class name="test.TestClass">
+        <methods>
+          <include name="setupSuite"/>
+          <include name="loginWithDP" invocation-numbers="2"/>
+          <include name="screenShot"/>
+          <include name="z_close"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- test.TestClass -->
+    </classes>
+  </test> <!-- First(failed) -->
+  <test thread-count="5" name="Second(failed)">
+    <parameter name="password" value="secret_sauce"/>
+    <parameter name="username" value="standard_user"/>
+    <classes>
+      <class name="test.HomePAgeTest">
+        <methods>
+          <include name="openBrowser"/>
+          <include name="x_close"/>
+          <include name="setupSuite"/>
+          <include name="screenShot1"/>
+          <include name="verifyLogo"/>
+        </methods>
+      </class> <!-- test.HomePAgeTest -->
+    </classes>
+  </test> <!-- Second(failed) -->
+</suite> <!-- Failed suite [Suite] -->
